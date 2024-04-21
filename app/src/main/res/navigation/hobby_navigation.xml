@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/hobby_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -17,5 +17,18 @@
         android:id="@+id/readFragment"
         android:name="com.ubaya.utsanmp_160421140.view.ReadFragment"
         android:label="fragment_read"
-        tools:layout="@layout/fragment_read" />
+        tools:layout="@layout/fragment_read" >
+        <argument
+            android:name="hobby_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ubaya.utsanmp_160421140.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/actionSignIn"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
