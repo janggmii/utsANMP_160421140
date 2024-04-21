@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hobby_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ubaya.utsanmp_160421140.view.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/actionRead"
+            app:destination="@id/readFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readFragment"
+        android:name="com.ubaya.utsanmp_160421140.view.ReadFragment"
+        android:label="fragment_read"
+        tools:layout="@layout/fragment_read" />
+</navigation>
